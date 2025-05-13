@@ -1,19 +1,21 @@
-import React from "react";
-import Display from "./Display";
-import ButtonPanel from "./ButtonPanel";
-import calculate from "../logic/calculate";
-import "./App.css";
+import React from 'react';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
+import calculate from '../logic/calculate';
+import './App.css';
 
 export default class App extends React.Component {
   state = {
     total: null,
     next: null,
     operation: null,
-    darkMode: false, // Add darkMode state
+    darkMode: false,
   };
 
   handleClick = buttonName => {
-    this.setState(calculate(this.state, buttonName));
+    const { total, next, operation } = this.state;
+    const newState = calculate({ total, next, operation }, buttonName);
+    this.setState(newState);
   };
 
   handleDarkModeToggle = () => {
@@ -25,12 +27,14 @@ export default class App extends React.Component {
     const displayValue = next || total || "0";
     return (
       <div className={`component-app ${darkMode ? "dark-mode" : ""}`}>
+        <div className="component-display-container">
+          <Display value={displayValue} />
+        </div>
         <div className="toggle-container">
           <button onClick={this.handleDarkModeToggle}>
             {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </div>
-        <Display value={displayValue} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

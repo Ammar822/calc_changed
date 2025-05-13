@@ -2,51 +2,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0; /* Light mode background */
-  font-family: sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transition for color change */
-  position: relative; /* Needed to position the toggle button */
+  background-color: #f5f5f5; /* Light background */
+  min-height: 100vh;
+  padding: 20px;
+  font-family: sans-serif; /* Added font-family for better readability */
 }
 
-.component-app > div {
-  margin: 10px;
-}
-
-/* Dark mode styles */
 .component-app.dark-mode {
-  background-color: #333; /* Dark mode background */
-  color: white; /* White text */
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
 }
 
-.component-app.dark-mode .component-display {
-  background-color: #555; /* Darker gray display background */
-}
-
-.component-app.dark-mode .component-button {
-  background-color: #444; /* Dark gray button background */
-  color: white; /* White button text */
-}
-
-.component-app.dark-mode .component-button.orange {
-  background-color: #ff9800; /* Orange button background in dark mode */
-}
-
-.component-app.dark-mode .component-button.orange:hover {
-  background-color: #cc7700; /* Darker orange on hover in dark mode */
+.component-display-container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px; /* Added margin to separate display and toggle */
 }
 
 .toggle-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-bottom: 20px; /* Added margin to separate toggle and button panel */
 }
 
 .toggle-container button {
-  padding: 5px 10px;
-  background-color: #4CAF50; /* Green background */
-  color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.toggle-container button:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
