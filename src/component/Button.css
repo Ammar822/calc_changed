@@ -1,27 +1,32 @@
 .component-button {
-  display: inline-flex;
-  width: 25%;
+  background-color: #e0e0e0; /* Light gray background for buttons */
+  border: 1px solid #ccc; /* Add a subtle border */
+  font-size: 1.5rem;
+  margin: 5px; /* Add some margin for spacing */
+  padding: 10px 20px; /* Add padding for better button size */
+  cursor: pointer; /* Indicate that the button is clickable */
   flex: 1 0 auto;
+  transition: background-color 0.2s ease; /* Add a smooth transition for hover effect */
+}
+
+.component-button:hover {
+  background-color: #d0d0d0; /* Slightly darker gray on hover */
 }
 
 .component-button.wide {
   width: 50%;
 }
 
-.component-button button {
-  background-color: #e0e0e0;
-  border: 0;
-  font-size: 1.5rem;
-  margin: 0 1px 0 0;
-  flex: 1 0 auto;
-  padding: 0;
-}
-
-.component-button:last-child button {
-  margin-right: 0;
-}
-
-.component-button.orange button {
+.component-button.orange {
   background-color: #f5923e;
   color: white;
+}
+
+.component-button.orange:hover {
+  background-color: #e5823e; /* Slightly darker orange on hover */
+}
+
+.button-row { /* Added class for better styling of button rows */
+  display: flex;
+  width: 100%;
 }

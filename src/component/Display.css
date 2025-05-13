@@ -3,8 +3,10 @@
   color: white;
   text-align: right;
   font-weight: 200;
-  flex: 0 0 auto;
   width: 100%;
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 .component-display > div {
