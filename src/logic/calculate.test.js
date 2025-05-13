@@ -179,9 +179,9 @@ describe("calculate", function() {
 
   // Test cases for edge cases with percentage operator
   test(["0", "%"], { next: "0" });
-  test["100", "%", "+", "5", "="]({ total: "5" });
-  test(["100", "%", "x", "5", "="]({ total: "5" });
-  test(["100", "%", "-", "5", "="]({ total: "95" });
-  test(["100", "%", "÷", "5", "="]({ total: "20" });
+  test(["100", "%", "+", "5", "="], { total: "5" });
+  test(["100", "%", "x", "5", "="], { total: "5" });
+  test(["100", "%", "-", "5", "="], { total: "95" });
+  test(["100", "%", "÷", "5", "="], { total: "20" });
 
 });
