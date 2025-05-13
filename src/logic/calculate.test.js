@@ -7,9 +7,9 @@ chai.config.truncateThreshold = 0;
 const expect = chai.expect;
 
 function pressButtons(buttons) {
-  const value = {};
+  let value = {};
   buttons.forEach(button => {
-    Object.assign(value, calculate(value, button));
+    value = calculate(value, button);
   });
   // no need to distinguish between null and undefined values
   Object.keys(value).forEach(key => {
@@ -170,4 +170,18 @@ describe("calculate", function() {
     total: "2",
     operation: 'x'
   });
+
+  // Test cases for null values
+  test(["+", null, "5"], { next: "5", operation: "+" });
+  test(["-", null, "5"], { next: "5", operation: "-" });
+  test(["x", null, "5"], { next: "5", operation: "x" });
+  test(["÷", null, "5"], { next: "5", operation: "÷" });
+
+  // Test cases for edge cases with percentage operator
+  test(["0", "%"], { next: "0" });
+  test["100", "%", "+", "5", "="]({ total: "5" });
+  test(["100", "%", "x", "5", "="]({ total: "5" });
+  test(["100", "%", "-", "5", "="]({ total: "95" });
+  test(["100", "%", "÷", "5", "="]({ total: "20" });
+
 });
