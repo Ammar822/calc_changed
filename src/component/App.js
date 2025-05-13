@@ -26,10 +26,9 @@ export default class App extends React.Component {
     return (
       <div className={`component-app ${darkMode ? "dark-mode" : ""}`}>
         <div className="toggle-container">
-          <label className="switch">
-            <input type="checkbox" onChange={this.handleDarkModeToggle} checked={darkMode} />
-            <span className="slider round"></span>
-          </label>
+          <button onClick={this.handleDarkModeToggle}>
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </button>
         </div>
         <Display value={displayValue} />
         <ButtonPanel clickHandler={this.handleClick} />
