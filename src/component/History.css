@@ -1,0 +1,17 @@
+.history-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.history-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 5px 0;
+}
