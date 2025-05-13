@@ -7,6 +7,7 @@
   cursor: pointer; /* Indicate that the button is clickable */
   flex: 1 0 auto;
   transition: background-color 0.2s ease; /* Add a smooth transition for hover effect */
+  color: black; /*default text color*/
 }
 
 .component-button:hover {
@@ -30,3 +31,24 @@
   display: flex;
   width: 100%;
 }
+
+/* Dark mode styles */
+.component-app.dark-mode .component-button {
+  background-color: #444; /* Dark background for buttons in dark mode */
+  color: white; /* White text for buttons in dark mode */
+  border-color: #555; /* Darker border in dark mode */
+}
+
+.component-app.dark-mode .component-button.orange {
+  background-color: #f5923e; /* Keep orange buttons orange in dark mode */
+  color: white; /* White text for orange buttons in dark mode */
+}
+
+.component-app.dark-mode .component-button:hover {
+  background-color: #555; /* Slightly darker gray on hover in dark mode */
+}
+
+.component-app.dark-mode .component-button.orange:hover {
+  background-color: #e5823e; /* Slightly darker orange on hover in dark mode */
+}
+
