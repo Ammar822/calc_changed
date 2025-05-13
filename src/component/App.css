@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center; /* Center the button horizontally */
   margin-bottom: 20px; /* Added margin to separate toggle and button panel */
+  align-self: flex-end; /* Align to the end of the flex container */
 }
 
 .toggle-container button {
