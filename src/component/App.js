@@ -13,6 +13,13 @@ export default class App extends React.Component {
   };
 
   handleClick = buttonName => {
+    if (buttonName === 'Backspace') {
+      const { next } = this.state;
+      if (next) {
+        this.setState({ next: next.slice(0, -1) });
+      }
+      return;
+    }
     const { total, next, operation } = this.state;
     const newState = calculate({ total, next, operation }, buttonName);
     this.setState(newState);

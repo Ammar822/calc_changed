@@ -27,6 +27,15 @@
   background-color: #e5823e; /* Slightly darker orange on hover */
 }
 
+.component-button.backspace {
+  background-color: #ccc; /* Light gray background for backspace button */
+  color: black; /* Dark text for backspace button */
+}
+
+.component-button.backspace:hover {
+  background-color: #bbb; /* Slightly darker gray on hover for backspace button */
+}
+
 .button-row { /* Added class for better styling of button rows */
   display: flex;
   width: 100%;
@@ -52,3 +61,11 @@
   background-color: #e5823e; /* Slightly darker orange on hover in dark mode */
 }
 
+.component-app.dark-mode .component-button.backspace {
+  background-color: #555; /* Dark gray background for backspace button in dark mode */
+  color: white; /* Light text for backspace button in dark mode */
+}
+
+.component-app.dark-mode .component-button.backspace:hover {
+  background-color: #666; /* Slightly darker gray on hover for backspace button in dark mode */
+}
